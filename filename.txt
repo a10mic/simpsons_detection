@@ -1,4 +1,3 @@
-filename
 abraham_grampa_simpson_0000.jpg
 abraham_grampa_simpson_0001.jpg
 abraham_grampa_simpson_0002.jpg
@@ -6690,7 +6689,6 @@ sideshow_bob_0813.jpg
 sideshow_bob_0451.jpg
 sideshow_bob_0011.jpg
 sideshow_bob_0481.jpg
-sideshow_bob_0765.jpg
 sideshow_bob_0777.jpg
 sideshow_bob_0677.jpg
 sideshow_bob_0360.jpg
@@ -6750,4 +6748,3 @@ sideshow_bob_0721.jpg
 sideshow_bob_0779.jpg
 sideshow_bob_0609.jpg
 sideshow_bob_0427.jpg
-sideshow_bob_0839.jpg
