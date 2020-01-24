@@ -18,6 +18,7 @@ import tensorflow as tf
 from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
+cwd = os.getcwd()
 
 flags = tf.app.flags
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
@@ -25,11 +26,44 @@ flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('image_dir', '', 'Path to images')
 FLAGS = flags.FLAGS
 
-
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    if row_label == 'raccoon':
+    if row_label == 'abraham_grampa_simpson':
         return 1
+    elif row_label == 'apu_nahasapeemapetilon' :
+	    return 2
+    elif row_label ==  'bart_simpson':
+	    return 3
+    elif row_label == 'charles_montgomery_burns':
+	    return 4
+    elif row_label == 'chief_wiggum' :
+        return 5
+    elif row_label == 'comic_book_guy' :
+        return 6
+    elif row_label ==  'edna_krabappel':
+        return 7
+    elif row_label == 'homer_simpson' :
+        return 8
+    elif row_label == 'kent_brockman' :
+        return 9
+    elif row_label == 'krusty_the_clown' :
+        return 10
+    elif row_label == 'lisa_simpson' :
+        return 11
+    elif row_label == 'marge_simpson':
+        return 12
+    elif row_label ==  'milhouse_van_houten':
+        return 13
+    elif row_label == 'moe_szyslak' :
+        return 14
+    elif row_label == 'ned_flanders':
+        return 15
+    elif row_label == 'nelson_muntz' :
+        return 16
+    elif row_label == 'principal_skinner':
+        return 17
+    elif row_label =='sideshow_bob':
+        return 18
     else:
         None
 
@@ -41,7 +75,7 @@ def split(df, group):
 
 
 def create_tf_example(group, path):
-    with tf.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
+    with tf.gfile.GFile("images/" + os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
         encoded_jpg = fid.read()
     encoded_jpg_io = io.BytesIO(encoded_jpg)
     image = Image.open(encoded_jpg_io)
