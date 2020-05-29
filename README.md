@@ -1,1 +1,0 @@
-# simpsons_detection

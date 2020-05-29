@@ -1,9 +1,7 @@
-simpsons_dataset
-the-simpsons-characters-dataset
-data
-train
+characters
+__pycache__/
 models
-research
-object_detection
-images
+training
+*.record
+.ipynb_checkpoints
 
